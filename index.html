@@ -9,7 +9,7 @@
 
 <body>
     <h1 ng-controller="MainController as vm">
-        {{vm.message}}
+        {{vm.message | myFilter}}
     </h1>
 
     <script src="node_modules/systemjs/dist/system.src.js"></script>
