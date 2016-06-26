@@ -1,21 +1,28 @@
-# angular1-typescript-systemjs
+# angular1TypescriptSystemjs
 An example on how to use TypeScript with AngularJS 1.* and SystemJS module loader
 
 ## Quick Start
 1. Clone Git repo and `cd` into new directory
   ```bash
-  git clone https://github.com/fadihania/angular1-typescript-systemjs.git
-  cd angular1-typescript-systemjs
+  git clone https://github.com/AmirSasson/Angular1TypescriptSystemJs.git
+  cd Angular1TypescriptSystemJs
   ```
   
 2. Install npm packages dependencies
   ```bash
   npm install
   ```
+3. Install typings
+  ```bash
+  typings install dt~angular --global --save
+  ```
 
-3. Run the application
+4. Run the application
   ```bash
   npm start
   ```
 
-4. Try to change the ts files and watch the changes in browser
+4. Edit code in vsCode:
+```bash
+  code .
+  ```
