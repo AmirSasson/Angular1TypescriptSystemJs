@@ -2,6 +2,9 @@
 Seed project of an application that uses:
 TypeScript with AngularJS 1.* and SystemJS module loader
 
+includes examples for filters,services,routing,..<br/>
+for those of you that still cannot migrate to Angular2, this is your best seed friend
+
 ## Quick Start
 1. Clone Git repo and `cd` into new directory
   ```bash
