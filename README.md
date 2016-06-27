@@ -1,5 +1,6 @@
 # angular1TypescriptSystemjs
-An example on how to use TypeScript with AngularJS 1.* and SystemJS module loader
+Seed project of an application that uses:
+TypeScript with AngularJS 1.* and SystemJS module loader
 
 ## Quick Start
 1. Clone Git repo and `cd` into new directory
