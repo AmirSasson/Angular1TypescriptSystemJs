@@ -1,4 +1,4 @@
-# angular1TypescriptSystemjs
+# Angular1.X + Typescript + Systemjs = GREAT POWER
 Seed project of an application that uses:
 TypeScript with AngularJS 1.* and SystemJS module loader
 
