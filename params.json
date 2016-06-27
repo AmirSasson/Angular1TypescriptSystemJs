@@ -1,5 +1,5 @@
 {
-  "name": "Angular1typescriptsystemjs",
+  "name": "Angular1.X Typescript Systemjs Seed",
   "tagline": "Seed project for angular 1.5 with Typescript and systemJS as module loader",
   "body": "### Welcome to my Angular1 typescript SystemJS seed project\r\nSeed project of an application that uses: TypeScript with AngularJS 1.* and SystemJS module loader\r\n\r\nincludes examples for filters, services, routing,..\r\nfor those of you that still cannot migrate to Angular2, this is your best seed friend\r\n\r\n### Support or Contact\r\nHaving trouble with the project? submit an issue or a pull request",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
