@@ -12,12 +12,20 @@
         {{vm.message | myFilter}}
     </h1>
 
+    <div>THE VIEW:</div>
+    <div ui-view></div>
+    
+    <a ui-sref="state1">State 1</a>
+    <a ui-sref="state2">State 2</a>
+
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="config.js"></script>
     <script>
         System
             .import('app/boot');
     </script>
+    
+    
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "es6",
         "module": "system",
         "sourceMap": true,
         "emitDecoratorMetadata": true,
@@ -8,7 +8,8 @@
         "moduleResolution": "node",
         "removeComments": false,
         "noImplicitAny": true,
-        "suppressImplicitAnyIndexErrors": true
+        "suppressImplicitAnyIndexErrors": true,
+         "isolatedModules": false
     },
     "exclude": [
         "node_modules"

@@ -7,13 +7,19 @@ System.config({
     },
 
     map: {
+        "angular-ui-router": "npm:angular-ui-router/release/angular-ui-router.js",
         "angular": "npm:angular/angular.js",
         "typescript": "npm:typescript/lib/typescript.js"
     },
     meta: {
+        'angular-ui-router': {
+            "deps": [
+                "angular"
+            ]
+        },
         'angular': {
             format: 'global',
             exports: 'angular'
-        },
+        }
     }
 });
