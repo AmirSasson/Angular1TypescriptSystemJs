@@ -10,6 +10,6 @@ export class TextFetcher {
     }
 
     public getTxt(): string {
-        return "hi! from Amir";
+        return "hi! from Fetcher Service";
     }
 }

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>AngularJS, TypeScript & SystemJS</title>
+    <title>AngularJS-TypeScript-SystemJS SEED</title>
     <base href="/">
 </head>
 
@@ -11,21 +11,21 @@
     <h1 ng-controller="MainController as vm">
         {{vm.message | myFilter}}
     </h1>
+    <a ui-sref="state1">State 1</a>|
+    <a ui-sref="state2">State 2</a>|
+    <a ui-sref="state1({detail: 'blah blah'})">State 1 parametrized</a>
 
     <div>THE VIEW:</div>
     <div ui-view></div>
-    
-    <a ui-sref="state1">State 1</a>
-    <a ui-sref="state2">State 2</a>
+
 
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="config.js"></script>
+    <script src="system.config.js"></script>
     <script>
         System
-            .import('app/boot');
+            .import('app/boot')            
     </script>
-    
-    
+
 </body>
 
 </html>

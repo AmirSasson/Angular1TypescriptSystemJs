@@ -2,8 +2,8 @@ import {TextFetcher} from "./services/some-service"
 
 export class MainController {
     static $inject = ['TextFetcher'];
-    message: string = "Hello AngularJS, TypeScript & SystemJS";
+    message: string = "Hello Seed!";
     constructor(private _fetcher: TextFetcher) {
-        this.message += ` From Fetcher: ${this._fetcher.getTxt()}` ;
+        this.message += ` ${this._fetcher.getTxt()}` ;
     }
 }

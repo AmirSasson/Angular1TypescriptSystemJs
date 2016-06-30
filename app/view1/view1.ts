@@ -1,10 +1,12 @@
 
 import {TextFetcher} from "../services/some-service"
+import {IUrlRouterProvider, IStateProvider , IStateParamsService} from 'angular-ui-router';
 
 export class View1Controller {
-    static $inject = ['TextFetcher'];
-    message: string = "View1 !!! AngularJS, TypeScript & SystemJS";
-    constructor(private _fetcher: TextFetcher) {
-        this.message += ` View1!! From Fetcher: ${this._fetcher.getTxt()}` ;
+    static $inject = ['TextFetcher','$stateParams']; 
+    message: string = "View1Controller";
+    constructor(private _fetcher: TextFetcher, private _stateParams :IStateParamsService) {
+        
+        this.message += ` ${this._fetcher.getTxt()} stateParam: ${this._stateParams['detail']}` ;
     }
 }
