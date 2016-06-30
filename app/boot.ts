@@ -17,9 +17,9 @@ Promise.all([
     .then(() => {
         var appModule = angular
             .module('app', ['ui.router'])
-            .controller('MainController', MainController)// ["TextFetcher", (tf: TextFetcher) => new MainController(tf)])
-            .controller('View1Controller', View1Controller)// ["TextFetcher", (tf: TextFetcher) => new MainController(tf)])
-            .controller('View2Controller', View2Controller)// ["TextFetcher", (tf: TextFetcher) => new MainController(tf)])
+            .controller('MainController', MainController)
+            .controller('View1Controller', View1Controller)
+            .controller('View2Controller', View2Controller)
             .factory("TextFetcher", () => { return new TextFetcher() })
             .factory("Ser3", ($http: ng.IHttpService, $location: ng.ILocationService) => { return new Application.Services.MyService($http, $location) })
             .factory("TextFetcher2", () => TextFetcher2)
