@@ -4,6 +4,7 @@ TypeScript with AngularJS 1.* and SystemJS module loader
 
 includes examples for filters,services,routing,..<br/>
 for those of you that still cannot migrate to Angular2, this is your best seed friend
+###### based on [fadi hania repository](https://github.com/fadihania/angular1-typescript-systemjs)
 
 ## Quick Start
 1. Clone Git repo and `cd` into new directory
@@ -30,3 +31,4 @@ for those of you that still cannot migrate to Angular2, this is your best seed f
 ```bash
   code .
   ```
+----------------------
