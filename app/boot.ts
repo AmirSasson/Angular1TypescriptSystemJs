@@ -21,7 +21,7 @@ Promise.all([
             .controller('View1Controller', View1Controller)
             .controller('View2Controller', View2Controller)
             .factory("TextFetcher", () => { return new TextFetcher() })
-            .factory("Ser3", ($http: ng.IHttpService, $location: ng.ILocationService) => { return new Application.Services.MyService($http, $location) })
+            .factory("ServiceInModule", ($http: ng.IHttpService, $location: ng.ILocationService) => { return new Application.Services.ServiceInModule($http, $location) })
             .factory("TextFetcher2", () => TextFetcher2)
             .filter("myFilter", AppFilters.Application.Filters.myFilter)
             .value('myValService', "YO!!");
@@ -29,6 +29,7 @@ Promise.all([
         appModule
             .config(['$urlRouterProvider', '$stateProvider', function (route: IUrlRouterProvider, stateProvider: IStateProvider) {
                 route.otherwise("/state1/");
+
 
                 stateProvider
                     .state('state1', {

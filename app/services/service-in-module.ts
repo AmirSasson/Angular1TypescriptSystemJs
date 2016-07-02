@@ -1,11 +1,11 @@
 
 export module Application.Services {
 
-    export interface IMyService {
+    export interface IServiceInModule {
         GetAll(successCallback: Function): void;
     }
 
-    export class MyService {
+    export class ServiceInModule implements IServiceInModule {
 
         http: ng.IHttpService;
         location: ng.ILocationService;
@@ -16,7 +16,8 @@ export module Application.Services {
         }
 
         GetAll(successCallback: Function): void {
-            this.http.get(this.location.absUrl()).success((data, status) => {
+            //this.http.get(this.location.absUrl()).success((data, status) => {
+            this.http.get('data.json').success((data, status) => {
                 successCallback(data);
             }).error(error => {
                 successCallback(error);
