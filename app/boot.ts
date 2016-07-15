@@ -12,12 +12,12 @@ import {SomeComponent, SomeComponentController} from './components/some-componen
 Promise.all([
     System.import('angular-ui-router'),
     //add more dependencies if needed here:
-    //System.import('someComponent'),
+    System.import('components'),
     //System.import('module 3'),
 ])
     .then(() => {
         var appModule = angular
-            .module('app', ['ui.router'])
+            .module('app', ['ui.router', 'app.component'])
             .controller('MainController', MainController)
             .controller('View1Controller', View1Controller)
             .controller('View2Controller', View2Controller)
@@ -25,8 +25,8 @@ Promise.all([
             .factory("ServiceInModule", ($http: ng.IHttpService, $location: ng.ILocationService) => { return new Application.Services.ServiceInModule($http, $location) })
             .factory("TextFetcher2", () => TextFetcher2)
             .filter("myFilter", AppFilters.Application.Filters.myFilter)
-            .component('someComponent', new SomeComponent())
-            .controller('SomeComponentController', SomeComponentController)
+            //.component('someComponent', new SomeComponent())
+            //.controller('SomeComponentController', SomeComponentController)
 
             .value('myValService', "YO!!");
 
