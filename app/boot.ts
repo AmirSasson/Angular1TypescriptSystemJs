@@ -11,9 +11,12 @@ import {SomeComponent, SomeComponentController} from './components/some-componen
 
 Promise.all([
     System.import('angular-ui-router'),
-    //add more dependencies if needed here:
     System.import('components'),
+    //add more dependencies if needed here:
     //System.import('module 3'),
+    //System.import('module 4'),
+    //...
+    
 ])
     .then(() => {
         var appModule = angular
@@ -25,8 +28,7 @@ Promise.all([
             .factory("ServiceInModule", ($http: ng.IHttpService, $location: ng.ILocationService) => { return new Application.Services.ServiceInModule($http, $location) })
             .factory("TextFetcher2", () => TextFetcher2)
             .filter("myFilter", AppFilters.Application.Filters.myFilter)
-            //.component('someComponent', new SomeComponent())
-            //.controller('SomeComponentController', SomeComponentController)
+
 
             .value('myValService', "YO!!");
 
@@ -45,8 +47,19 @@ Promise.all([
                     .state('state2', {
                         url: "/state2",
                         templateUrl: 'app/view2/view2.html',
-                        controller: View2Controller
-                    });
+                        controller: View2Controller,
+                        
+                    })
+
+                     .state('state3', {
+                        url: "/state3/:detail/:viewId",
+                        templateUrl: 'app/view1/view1.html',
+                        controller: 'View1Controller as vm'//same view as View1
+                    })
+                     .state('state4', {
+                        url: "/state4",
+                        template:'<some-component></some-component>',                        
+                    })
             }])
 
         // Bootstrap the angular app module

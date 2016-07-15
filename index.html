@@ -5,35 +5,27 @@
     <meta charset="utf-8" />
     <title>AngularJS-TypeScript-SystemJS SEED</title>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-OiWEn8WwtH+084y4yW2YhhH6z/qTSecHZuk/eiWtnvLtU+Z8lpDsmhOKkex6YARr"
+        crossorigin="anonymous">
     <base href="/">
 </head>
 
 <body class="container">
-    <div class="page-header" ng-controller="MainController as vm">
+    <div class="page-header jumbotron" ng-controller="MainController as vm">
         <div class="h1">
             {{vm.message | myFilter}}
         </div>
-    </div>
+    </div>    
 
-    <ul class="nav nav-tabs">
-        <li>
-            <a ui-sref="state1">State 1</a>
-        </li>
-        <li>
-            <a ui-sref="state2">State 2</a>
-        </li>
-        <li>
-            <a ui-sref="state1({detail: 'blah blah'})">State 1 parametrized</a>
-        </li>
-    </ul>
     <div class="row">
         <div class="col-md-7">
-            <div ui-view></div>
+            <div ng-include="'nav.html'"></div>
+            <div ui-view><i class="fa fa-cog" style="font-size:48px"></i></div>
         </div>
         <div class="col-md-5">
             <div class="thumbnail">
-                <some-component><i class="fa fa-spinner" style="font-size:48px"></i></some-component>
+                <div class="h3">some-component on index.html:</div>
+                <some-component><i class="fa fa-cog" style="font-size:48px"></i></some-component>
             </div>
         </div>
     </div>
