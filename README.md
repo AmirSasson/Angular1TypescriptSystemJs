@@ -19,7 +19,7 @@ for those of you that still cannot migrate to Angular2, this is your best seed f
   ```
 3. Install typings
   ```bash
-  typings install dt~angular --global --save
+  typings install
   ```
 
 4. Run the application
