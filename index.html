@@ -12,9 +12,9 @@
 <body>
 
     <div class="page-header" ng-controller="MainController as vm">
-        <h1>
+        <div class="h1">
             {{vm.message | myFilter}}
-        </h1>
+        </div>
     </div>
 
     <ul class="nav nav-tabs">
@@ -28,9 +28,15 @@
             <a ui-sref="state1({detail: 'blah blah'})">State 1 parametrized</a>
         </li>
     </ul>
-    <div ui-view></div>
-    <div class="thumbnail">
-        <some-component><i class="fa fa-spinner" style="font-size:48px"></i></some-component>
+    <div class="row">
+        <div class="col-md-7">
+            <div ui-view></div>
+        </div>
+        <div class="col-md-5">
+            <div class="thumbnail">
+                <some-component><i class="fa fa-spinner" style="font-size:48px"></i></some-component>
+            </div>
+        </div>
     </div>
 
 
