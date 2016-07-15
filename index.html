@@ -4,22 +4,35 @@
 <head>
     <meta charset="utf-8" />
     <title>AngularJS-TypeScript-SystemJS SEED</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <base href="/">
 </head>
 
 <body>
-    <h1 ng-controller="MainController as vm">
-        {{vm.message | myFilter}}
-    </h1>
-    <a ui-sref="state1">State 1</a>|
-    <a ui-sref="state2">State 2</a>|
-    <a ui-sref="state1({detail: 'blah blah'})">State 1 parametrized</a>
 
-    <div>THE VIEW:</div>
+    <div class="page-header" ng-controller="MainController as vm">
+        <h1>
+            {{vm.message | myFilter}}
+        </h1>
+    </div>
+
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a ui-sref="state1">State 1</a>
+        </li>
+        <li>
+            <a ui-sref="state2">State 2</a>
+        </li>
+        <li>
+            <a ui-sref="state1({detail: 'blah blah'})">State 1 parametrized</a>
+        </li>
+    </ul>
     <div ui-view></div>
+    <div class="thumbnail">
+        <some-component><i class="fa fa-spinner" style="font-size:48px"></i></some-component>
+    </div>
 
-    <some-component>Loading Component ...</some-component>
-  
 
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="system.config.js"></script>
