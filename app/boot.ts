@@ -7,11 +7,12 @@ import {Application} from "./services/service-in-module"
 import * as AppFilters from "./services/filter"
 import {View1Controller} from './view1/view1'
 import {View2Controller} from './view2/view2'
+import {SomeComponent, SomeComponentController} from './components/some-component'
 
 Promise.all([
     System.import('angular-ui-router'),
     //add more dependencies if needed here:
-    //System.import('module 2'),
+    //System.import('someComponent'),
     //System.import('module 3'),
 ])
     .then(() => {
@@ -24,6 +25,9 @@ Promise.all([
             .factory("ServiceInModule", ($http: ng.IHttpService, $location: ng.ILocationService) => { return new Application.Services.ServiceInModule($http, $location) })
             .factory("TextFetcher2", () => TextFetcher2)
             .filter("myFilter", AppFilters.Application.Filters.myFilter)
+            .component('someComponent', new SomeComponent())
+            .controller('SomeComponentController', SomeComponentController)
+
             .value('myValService', "YO!!");
 
         appModule

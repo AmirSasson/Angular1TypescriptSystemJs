@@ -9,6 +9,7 @@ System.config({
     map: {
         "angular-ui-router": "npm:angular-ui-router/release/angular-ui-router.js",
         "angular": "npm:angular/angular.js",
+        "someComponent": "./app/components/some-component",
         "typescript": "npm:typescript/lib/typescript.js"
     },
     meta: {
