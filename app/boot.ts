@@ -25,7 +25,7 @@ Promise.all([
             .controller("View1Controller", View1Controller)
             .controller("View2Controller", View2Controller)
             .factory("TextFetcher", () => { return new TextFetcher(); })
-            .factory("ServiceInModule", ($http: ng.IHttpService, $location: ng.ILocationService) => { return new Application.Services.ServiceInModule($http, $location); })
+            .factory("ServiceInModule", ($http: ng.IHttpService, $location: ng.ILocationService, $log: ng.ILogService) => { return new Application.Services.ServiceInModule($http, $location, $log); })
             .factory("TextFetcher2", () => TextFetcher2)
             .filter("myFilter", AppFilters.Application.Filters.myFilter)
 
@@ -51,12 +51,12 @@ Promise.all([
 
                     })
 
-                     .state("state3", {
+                    .state("state3", {
                         url: "/state3/:detail/:viewId",
                         templateUrl: "app/view1/view1.html",
                         controller: "View1Controller as vm"// same view as View1
                     })
-                     .state("state4", {
+                    .state("state4", {
                         url: "/state4",
                         template: "<some-component></some-component>",
                     });
