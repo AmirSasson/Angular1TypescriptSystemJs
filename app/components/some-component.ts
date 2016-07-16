@@ -1,12 +1,9 @@
-import * as angular from 'angular';
-import {TextFetcher} from "../services/some-service"
-//  import {} from 'an'
-
-
+import * as angular from "angular";
+import {TextFetcher} from "../services/some-service";
 
 export class SomeComponent implements ng.IComponentOptions {
 
-    //public bindings: any;
+    // public bindings: any;
     public controller: any;
     public templateUrl: string;
     public controllerAs: string;
@@ -17,9 +14,9 @@ export class SomeComponent implements ng.IComponentOptions {
                   dataBinding: '<',
                   functionBinding: '&'
               };*/
-        this.controllerAs = 'vm';
+        this.controllerAs = "vm";
         this.controller = SomeComponentController;
-        this.templateUrl = 'app/Components/some-component.html';
+        this.templateUrl = "app/Components/some-component.html";
     }
 
 }
@@ -29,11 +26,11 @@ export class SomeComponentController {
     public msg: string;
 
     constructor() {
-        this.msg = 'SomeComponentController msg';
+        this.msg = "SomeComponentController msg";
     }
 }
 
-var mod = angular.module('app.component', [])
-    .component('someComponent', new SomeComponent())
-    .controller('SomeComponentController', SomeComponentController);    
-//mod.component('someComponent', new SomeComponent());
+let mod = angular.module("app.component", [])
+    .component("someComponent", new SomeComponent())
+    .controller("SomeComponentController", SomeComponentController);
+// mod.component('someComponent', new SomeComponent());
