@@ -8,6 +8,7 @@ import * as AppFilters from "./services/filter";
 import {View1Controller} from "./view1/view1";
 import {View2Controller} from "./view2/view2";
 import {SomeComponent, SomeComponentController} from "./components/some-component";
+import {Promise} from "es6-promise";
 
 Promise.all([
     System.import("angular-ui-router"),
@@ -28,14 +29,11 @@ Promise.all([
             .factory("ServiceInModule", ($http: ng.IHttpService, $location: ng.ILocationService, $log: ng.ILogService) => { return new Application.Services.ServiceInModule($http, $location, $log); })
             .factory("TextFetcher2", () => TextFetcher2)
             .filter("myFilter", AppFilters.Application.Filters.myFilter)
-
-
             .value("myValService", "YO!!");
 
         appModule
             .config(["$urlRouterProvider", "$stateProvider", function (route: IUrlRouterProvider, stateProvider: IStateProvider) {
                 route.otherwise("/state1/");
-
 
                 stateProvider
                     .state("state1", {
@@ -43,14 +41,12 @@ Promise.all([
                         templateUrl: "app/view1/view1.html",
                         controller: "View1Controller as vm"
                     })
-
                     .state("state2", {
                         url: "/state2",
                         templateUrl: "app/view2/view2.html",
                         controller: View2Controller,
 
                     })
-
                     .state("state3", {
                         url: "/state3/:detail/:viewId",
                         templateUrl: "app/view1/view1.html",
